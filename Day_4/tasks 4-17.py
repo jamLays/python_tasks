@@ -11,7 +11,7 @@ print('title ', company_name.title())
 print(company_name.swapcase())
 #9.Cut(slice) out the first word of Coding For All string.
 slice_example=company_name[7:]
-print(slice_example)
+print('slice',slice_example)
 #10.Check if Coding For All string contains a word Coding using the method index, find or other methods.
 look_for='Coding'
 print(company_name.index(look_for))
@@ -40,6 +40,17 @@ first_symb = python_string[0]
 second_symb = python_string[7]
 third_symb = python_string[11]
 print(first_symb, second_symb, third_symb)
+#20.Use index to determine the position of the first occurrence of C in Coding For All
+C_index='C'
+print(company_name.index(C_index))
+F_index='F'
+print(company_name.index(F_index))
+i_index='i'
+print(company_name.index(i_index))
+
+phrase='tuple muple'
+print(phrase.capitalize())
+
 
 
 
