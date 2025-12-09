@@ -39,3 +39,17 @@ list = ["apple", "banana", "cherry"]
 tuple = ("kiwi", "orange")
 list.extend(tuple)
 print(list)
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+orange_and_lemon = fruits[::2]
+print(orange_and_lemon)
+orange_and_mango = fruits[-3:-1]
+print(orange_and_mango)
+orange_mango_lemon = fruits[-3:]
+print(orange_mango_lemon)
+reverse_fruits = fruits[::-1]
+print(reverse_fruits)
+last_index = len(fruits) - 1
+fruits[last_index] = 'lime'
+print(fruits)
+
