@@ -67,7 +67,7 @@ python = {'p', 'y', 't', 'o','n'}
 dragon = {'d', 'r', 'a', 'g', 'o','n'}
 print(python.isdisjoint(dragon))
 
-print(dragon.isdisjoint(python))
+
 
 
 
