@@ -33,4 +33,47 @@ if score >= 60:
 else:
     print ('Fail')
 
+import random
+coin1 = bool(random.randint(0, 1))
+coin2 = bool(random.randint(0, 1))
+
+print('coin1', coin1)
+print('coin2', coin2)
+
+if coin1 and coin2:
+    print('Yes')
+else:
+    print('No')
+
+print('0 - False, 1 - True')
+
+experiense = bool(int(input('experiense: ')))
+education = bool(int(input('education: ')))
+test_passed = bool(int(input('test_passed: ')))
+
+if experiense:
+    # если есть опыт
+    if test_passed:
+        # если выполнил тестовое задание (есть опыт)
+        print('interview')
+
+    else:
+        # иначе (не выполнил тестовое задание) (есть опыт)
+        print('reject')
+
+else:
+    # иначе (нет опыта)
+    if education:
+        # если есть образование (нет опыта)
+        if test_passed:
+            # если выполнил тестовое задание (нет опыта)
+            print('interview')
+
+        else:
+            # иначе (не выполнил тестовое задание) (есть опыт)
+            print('reject')
+
+    else:
+        # иначе (нет образования) (нет опыта)
+        print('reject')
 
