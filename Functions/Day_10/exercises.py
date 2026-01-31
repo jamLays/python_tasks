@@ -106,11 +106,41 @@ count = 10
 #         print(country)
 
 #2. This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop
-fruits = ['banana', 'orange', 'mango', 'lemon']
-for i in range(len(fruits)-1, -1,-1):
-    print(fruits[i])
+# fruits = ['banana', 'orange', 'mango', 'lemon']
+# for i in range(len(fruits)-1, -1,-1):
+#     print(fruits[i])
 
-#3.Go to the data folder and use the countries_data.py file
+#3.1 Go to the data folder and use the countries_data.py file
+all_languages = []
+from countries_data import countries
+for country in countries:
+    all_languages.extend(country['languages'])
+print(all_languages)
+unique = set(all_languages)
+print(unique)
+print(len(unique))
+
+
+#3.2 Find the ten most spoken languages from the data
+from collections import Counter
+all_languages = []
+from countries_data import countries
+for country in countries:
+    all_languages.extend(country['languages'])
+print(all_languages)
+number_all_lang = Counter(all_languages)
+print(number_all_lang)
+most_common_languages = number_all_lang.most_common(10)
+print(most_common_languages)
+
+#3.3 Find the 10 most populated countries in the world
+sorted_by_popu = sorted(countries, key = lambda x: x['population'], reverse = True)
+print(sorted_by_popu)
+top_10_populated = sorted_by_popu[:10]
+print(top_10_populated)
+for i in top_10_populated:
+    print(i['name'], i['population'])
+
 
 
 
