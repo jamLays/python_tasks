@@ -217,6 +217,92 @@ def is_empty(lst):
     else:
         return ("is not empty")
 
+print(is_empty([1,2,3,4,5,6,7]))
+print(is_empty([]))
+
+#4. Write a function called greet which takes a default argument, name.
+# If no argument is supplied it should print "Hello, Guest!", otherwise it should greet the person by name
+
+def greet (name="Guest"):
+    print(f"Hello, {name}!")
+
+greet("Alice")
+
+#5. Create a function called show_args to take an arbitrary number of named arguments and print their names and values
+
+def show_args(**args):
+    for k,v in args.items():
+        print(f"{k}: {v}")
+
+show_args(name="Alice", age=30, city="New York")
+show_args(name="Bob", pet="Fluffy, the bunny")
+
+#Exercises: Level 3
+#1.Write a function called is_prime, which checks if a number is prime
+
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n%i == 0:
+            return False
+    return True
+
+print(is_prime(19))
+
+#2. Write a functions which checks if all items are unique in the list
+
+def is_unique(lst,i):
+    if lst.count(i) ==1:
+        return True
+    else:
+        return False
+
+fruits = ['apple', 'banana', 'orange', 'cherry', 'banana']
+print(is_unique(fruits, 'cherry'))
+
+#3.Write a function which checks if all the items of the list are of the same data type
+
+def same_type(lst):
+    if len(lst)==0:
+        return "is empty"
+    first_item_type = type(lst[0])
+    for item in lst[1:]:
+        if type(item) == first_item_type:
+            return True
+        else:
+            return False
+
+# lst = []
+# lst = ['apple', 'banana', 'orange', 'cherry', 'banana']
+lst = ['Asabeneh', 250, True, False, {'country': 'Finland', 'city': 'Helsinki'}]
+print(same_type(lst))
+
+#4.Write a function which check if provided variable is a valid python variable
+
+import keyword
+def is_valid_variable(name):
+    return name.isidentifier() and keyword.iskeyword(name)
+
+print(is_valid_variable("%ccuws"))
+print(is_valid_variable("54ccuws"))
+print(is_valid_variable("Asab_4"))
+
+#5.Go to the data folder and access the countries-data.py file:
+#Create a function called the most_spoken_languages in the world.
+# It should return 10 or 20 most spoken languages in the world in descending order
+
+from countries_data import
+
+def most_spoken_languages
+
+
+
+
+
+
+
 
 
 
