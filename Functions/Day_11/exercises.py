@@ -293,9 +293,11 @@ print(is_valid_variable("Asab_4"))
 #Create a function called the most_spoken_languages in the world.
 # It should return 10 or 20 most spoken languages in the world in descending order
 
-from countries_data import
+# from countries_data import countries
+# from collections import Counter
+#
+# def most_spoken_languages(countries):
 
-def most_spoken_languages
 
 
 
