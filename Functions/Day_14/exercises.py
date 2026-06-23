@@ -145,3 +145,74 @@ print('11', final_sentence)
 #12. Declare a function called categorize_countries that returns a list of countries with
 # some common pattern (you can find the countries list in this repository as countries.js(eg 'land', 'ia', 'island', 'stan'))
 
+from countries import countries
+def categorize_countries(countries):
+    land_countries = []
+    ia_countries = []
+    isla_countries = []
+    stan_countries = []
+    for country in countries:
+        if 'land' in country:
+            land_countries.append(country)
+        elif 'ia' in country:
+            ia_countries.append(country)
+        elif 'isla' in country:
+            isla_countries.append(country)
+        elif 'stan' in country:
+            stan_countries.append(country)
+    return {
+        'land':land_countries,
+         'ia': ia_countries,
+         'isla':isla_countries,
+         'stan':stan_countries
+    }
+
+print('12.', categorize_countries(countries))
+
+#13. Create a function returning a dictionary, where keys stand for starting letters of countries
+# and values are the number of country names starting with that letter
+
+from countries import countries
+def stand_with_count (country):
+    letters = map(lambda country: country [0], countries)
+
+    result = {}
+    for letter in letters:
+        result[letter] = result.get(letter, 0) + 1
+    return result
+
+print('13.', stand_with_count(countries))
+
+#14. Declare a get_first_ten_countries function - it returns a list of first ten countries from
+# the countries.js list in the data folder
+
+from countries import countries
+def get_first_ten (countries):
+    return countries[:10]
+print('14.', get_first_ten(countries))
+
+#15.Declare a get_last_ten_countries function that returns the last ten countries in the countries list
+
+from countries import countries
+def get_last_ten (countries):
+    return countries[-10:]
+print('15.', get_last_ten(countries))
+
+#Level 3
+#Sort countries by name, by capital, by population
+
+from countries_data import countries
+def sort_by_name(countries):
+    return sorted(countries, key=lambda country: country["name"])
+print('16.', sort_by_name(countries))
+
+
+
+
+
+
+
+
+
+
+
